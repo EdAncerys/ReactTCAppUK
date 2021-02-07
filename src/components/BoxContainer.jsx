@@ -20,8 +20,8 @@ export default function BoxContainer({ children }) {
         boxShadow: boxShadow,
         transition: `all 250ms ease-in-out`,
       }}
-      onMouseOver={() => setHover(!hover)}
-      onMouseLeave={() => setHover(!hover)}
+      onPointerEnter={() => setHover(!hover)}
+      onPointerLeave={() => setHover(!hover)}
     >
       {children}
     </div>

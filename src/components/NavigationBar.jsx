@@ -22,7 +22,7 @@ const styles = {
     height: '100px',
     backgroundColor: `${colors.white}`,
     borderBottom: `1px solid ${colors.silver}`,
-    fontSize: '4vh',
+    fontSize: '3vw',
     userSelect: 'none',
     cursor: 'default',
     zIndex: 1,
