@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AppContext } from '../App';
 import Button from './Button.jsx';
 
 import colors from '../config/colors';
 
 export default function TaxForm({ props }) {
+  const { manageAppContext } = useContext(AppContext);
+
   return (
     <div style={styles.container}>
       <div>
@@ -31,7 +34,10 @@ export default function TaxForm({ props }) {
             placeholder="For example 18 000"
             style={styles.inputField}
           />
-          <Button title="Calculate" />
+          <Button
+            title="Calculate"
+            onClick={() => manageAppContext.setSalary(!manageAppContext.salary)}
+          />
         </form>
       </div>
     </div>
