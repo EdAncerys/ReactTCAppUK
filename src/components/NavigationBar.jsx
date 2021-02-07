@@ -5,7 +5,7 @@ import colors from '../config/colors';
 export default function NavigationBar({ props }) {
   return (
     <div style={styles.container}>
-      <div>Logo</div>
+      <div style={styles.logo}>Pay Tax Calculator</div>
       <div>NavBar</div>
     </div>
   );
@@ -13,18 +13,24 @@ export default function NavigationBar({ props }) {
 
 const styles = {
   container: {
-    position: 'absolute',
+    position: 'sticky',
     top: 0,
-    width: '100%',
     display: 'grid',
     alignContent: 'center',
     gridTemplateColumns: 'auto auto',
+    width: '100%',
     height: '100px',
+    backgroundColor: `${colors.white}`,
     borderBottom: `1px solid ${colors.silver}`,
-    color: '#0275d8',
+    opacity: '0.6',
     fontSize: '4vh',
     userSelect: 'none',
     cursor: 'default',
     zIndex: 1,
+  },
+  logo: {
+    marginLeft: '2vw',
+    color: '#0275d8',
+    fontWeight: '800',
   },
 };
