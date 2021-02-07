@@ -22,6 +22,8 @@ export default function BoxContainer({ children, mouseHover }) {
         borderRadius: `8px`,
         boxShadow: boxShadow,
         transition: `all 250ms ease-in-out`,
+        minHeight: '150px',
+        overflow: 'auto',
       }}
       onPointerEnter={() => setHover(!hover)}
       onPointerLeave={() => setHover(!hover)}
