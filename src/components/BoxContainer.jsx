@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 
 import colors from '../config/colors';
 
-export default function BoxContainer({ children }) {
+export default function BoxContainer({ children, mouseHover }) {
   const [hover, setHover] = useState(false);
 
-  const boxShadow = hover ? false : `5px 10px 18px 0px rgba(0, 0, 0, 0.1)`;
+  const boxShadow =
+    hover && mouseHover === 'true'
+      ? false
+      : `5px 10px 18px 0px rgba(0, 0, 0, 0.1)`;
 
   return (
     <div

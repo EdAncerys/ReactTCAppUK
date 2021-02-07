@@ -9,7 +9,7 @@ export default function FrontPageContent({ props }) {
     <div style={styles.container}>
       <div style={styles.mainHeader}>Calculate Your Taxes</div>
       <div>
-        <BoxContainer>
+        <BoxContainer mouseHover="true">
           <TaxForm />
         </BoxContainer>
       </div>
