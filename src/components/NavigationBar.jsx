@@ -22,7 +22,6 @@ const styles = {
     height: '100px',
     backgroundColor: `${colors.white}`,
     borderBottom: `1px solid ${colors.silver}`,
-    opacity: '0.6',
     fontSize: '4vh',
     userSelect: 'none',
     cursor: 'default',
@@ -30,7 +29,7 @@ const styles = {
   },
   logo: {
     marginLeft: '2vw',
-    color: '#0275d8',
+    color: `${colors.primary}`,
     fontWeight: '800',
   },
 };

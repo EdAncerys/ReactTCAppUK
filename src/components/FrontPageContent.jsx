@@ -5,8 +5,8 @@ import colors from '../config/colors';
 export default function FrontPageContent({ props }) {
   return (
     <div style={styles.container}>
-      <div style={styles.content}>hello</div>
-      <div style={styles.shape}>hello</div>
+      <div style={styles.mainHeader}>Calculate Your Taxes</div>
+      <div style={styles.backgroundShape}></div>
     </div>
   );
 }
@@ -16,11 +16,15 @@ const styles = {
     display: 'grid',
     justifyContent: 'center',
     width: '100%',
+    height: '100vh',
   },
-  content: {
-    paddingTop: '1vh',
+  mainHeader: {
+    margin: '2vh auto',
+    fontSize: `60px`,
+    fontWeight: '800',
+    color: `${colors.primary}`,
   },
-  shape: {
+  backgroundShape: {
     position: 'absolute',
     opacity: '0.4',
     backgroundColor: `${colors.silver}`,

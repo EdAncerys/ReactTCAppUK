@@ -12,5 +12,7 @@ export default function App({ props }) {
 }
 
 const styles = {
-  container: {},
+  container: {
+    userSelect: 'none',
+  },
 };
