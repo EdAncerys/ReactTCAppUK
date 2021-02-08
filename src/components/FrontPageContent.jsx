@@ -7,6 +7,7 @@ import colors from '../config/colors';
 
 export default function FrontPageContent({ props }) {
   const { manageAppContext } = useContext(AppContext);
+  const salary = manageAppContext.salary;
 
   return (
     <div style={styles.container}>
@@ -16,6 +17,7 @@ export default function FrontPageContent({ props }) {
           <TaxForm />
         </BoxContainer>
       </div>
+      {salary !== '' && <div>{salary}</div>}
       <div style={styles.backgroundShape}></div>
     </div>
   );

@@ -6,7 +6,7 @@ export const AppContext = React.createContext();
 
 export default function App({ props }) {
   const SESSION_STORAGE_KEY = 'TaxCalculator';
-  const [salary, setSalary] = useState(false);
+  const [salary, setSalary] = useState('');
   const manageAppContext = {
     salary,
     setSalary,

@@ -41,6 +41,9 @@ export default function TaxForm({ props }) {
             onKeyDown={(event) => {
               event.key === 'e' && event.preventDefault();
             }}
+            onChange={(event) => {
+              manageAppContext.setSalary(event.target.value);
+            }}
           />
           <Button
             title="Calculate"
