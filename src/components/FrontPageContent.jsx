@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AppContext } from '../App';
 import BoxContainer from './BoxContainer.jsx';
 import TaxForm from './TaxForm.jsx';
 
 import colors from '../config/colors';
 
 export default function FrontPageContent({ props }) {
+  const { manageAppContext } = useContext(AppContext);
+
   return (
     <div style={styles.container}>
       <div style={styles.mainHeader}>Calculate Your Taxes</div>
@@ -21,18 +24,15 @@ export default function FrontPageContent({ props }) {
 const styles = {
   container: {
     display: 'grid',
-    gridTemplateRows: '15vh auto',
-    justifyContent: 'center',
     width: '100%',
-    height: '100vh',
   },
   mainHeader: {
     display: 'grid',
     alignContent: 'center',
-    margin: '2vh auto',
+    margin: '1vh auto',
     padding: '20px auto',
     textAlign: 'center',
-    fontSize: `8vw`,
+    fontSize: `6vw`,
     fontWeight: '800',
     color: `${colors.primary}`,
   },
