@@ -30,6 +30,9 @@ export default function TaxForm({ props }) {
           </label>
           <input
             type="number"
+            onKeyDown={(event) => {
+              event.key === 'e' && event.preventDefault();
+            }}
             name="name"
             placeholder="For example 18 000"
             style={styles.inputField}
