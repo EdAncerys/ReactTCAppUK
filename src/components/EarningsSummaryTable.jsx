@@ -21,7 +21,9 @@ export default function EarningsSummaryTable({ props }) {
   const PERSONAL_ALLOWANCE_2010_2011 = 6475;
   const PERSONAL_ALLOWANCE_2009_2010 = 6475;
 
-  let selectedYear = PERSONAL_ALLOWANCE_2019_2020;
+  const personalAllowance = PERSONAL_ALLOWANCE_2019_2020;
+  const taxableIncome = salary - personalAllowance;
+  const taxOn_20 = salary > 
 
   return (
     <div style={styles.container}>
@@ -52,7 +54,7 @@ export default function EarningsSummaryTable({ props }) {
         <BoxContainer mouseHover="true">
           <div style={styles.tableRow}>
             <div style={styles.tableCell}>Personal Allowance</div>
-            <div style={styles.tableCell}>{selectedYear}</div>
+            <div style={styles.tableCell}>{personalAllowance}</div>
             <div style={styles.tableCell}>{salary}</div>
             <div style={styles.tableCell}>{salary}</div>
             <div style={styles.tableCell}>{salary}</div>
@@ -62,7 +64,7 @@ export default function EarningsSummaryTable({ props }) {
         <BoxContainer mouseHover="true">
           <div style={styles.tableRow}>
             <div style={styles.tableCell}>Taxable Income</div>
-            <div style={styles.tableCell}>{salary}</div>
+            <div style={styles.tableCell}>{taxableIncome}</div>
             <div style={styles.tableCell}>{salary}</div>
             <div style={styles.tableCell}>{salary}</div>
             <div style={styles.tableCell}>{salary}</div>
