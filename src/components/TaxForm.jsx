@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../App';
+import UISlider from './UISlider.jsx';
 import Button from './Button.jsx';
 
 import colors from '../config/colors';
@@ -45,6 +46,7 @@ export default function TaxForm({ props }) {
               manageAppContext.setSalary(event.target.value);
             }}
           />
+          <UISlider />
           <Button
             title="Calculate"
             onClick={() => manageAppContext.setSalary(!manageAppContext.salary)}
