@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { AppContext } from '../App';
 import BoxContainer from './BoxContainer.jsx';
 import TaxForm from './TaxForm.jsx';
+import EarningsSummaryTable from './EarningsSummaryTable.jsx';
 
 import colors from '../config/colors';
 
@@ -17,18 +18,7 @@ export default function FrontPageContent({ props }) {
           <TaxForm />
         </BoxContainer>
       </div>
-      {salary !== '' && (
-        <BoxContainer mouseHover="true">
-          <div style={styles.tableHeader}>Tax Calculator for £ {salary}</div>
-
-          <BoxContainer mouseHover="true">
-            {salary} some some somee
-          </BoxContainer>
-          <BoxContainer mouseHover="true">
-            {salary} some some somee
-          </BoxContainer>
-        </BoxContainer>
-      )}
+      {salary !== '' && <EarningsSummaryTable />}
       <div style={styles.backgroundShape}></div>
     </div>
   );
