@@ -18,7 +18,7 @@ export default function FrontPageContent({ props }) {
           <TaxForm />
         </BoxContainer>
       </div>
-      {salary !== '' && <EarningsSummaryTable />}
+      {salary !== false && <EarningsSummaryTable />}
       <div style={styles.backgroundShape}></div>
     </div>
   );

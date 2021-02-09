@@ -6,7 +6,10 @@ import colors from '../config/colors';
 
 export default function EarningsSummaryTable({ props }) {
   const { manageAppContext } = useContext(AppContext);
-  const salary = manageAppContext.salary;
+  const salary =
+    manageAppContext.salary !== false && manageAppContext.salarySlider === false
+      ? manageAppContext.salary
+      : manageAppContext.salarySlider;
   const salaryMonthly = salary / 365;
 
   const PERSONAL_ALLOWANCE_2019_2020 = 12500;

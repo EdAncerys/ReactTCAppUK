@@ -43,7 +43,7 @@ export default function TaxForm({ props }) {
               event.key === 'e' && event.preventDefault();
             }}
             onChange={(event) => {
-              manageAppContext.setSalary(event.target.value);
+              manageAppContext.setSalary(Number(event.target.value));
             }}
           />
           <UISlider />
