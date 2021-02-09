@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import colors from '../config/colors';
 
-export default function BoxContainer({ children, mouseHover }) {
+export default function BoxContainer({ children, height, mouseHover }) {
   const [hover, setHover] = useState(false);
 
   const boxShadow =
@@ -16,13 +16,13 @@ export default function BoxContainer({ children, mouseHover }) {
         display: 'grid',
         justifyContent: 'center',
         alignContent: 'center',
-        margin: `50px`,
+        margin: `1vh 0`,
         padding: `10px`,
         border: `1px solid ${colors.silver}`,
         borderRadius: `8px`,
         boxShadow: boxShadow,
         transition: `all 250ms ease-in-out`,
-        minHeight: '150px',
+        height: `${height}`,
         overflow: 'auto',
       }}
       onPointerEnter={() => setHover(!hover)}

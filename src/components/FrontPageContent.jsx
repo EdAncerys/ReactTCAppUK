@@ -12,12 +12,23 @@ export default function FrontPageContent({ props }) {
   return (
     <div style={styles.container}>
       <div style={styles.mainHeader}>Calculate Your Taxes</div>
-      <div>
+      <div style={styles.formContainer}>
         <BoxContainer mouseHover="true">
           <TaxForm />
         </BoxContainer>
       </div>
-      {salary !== '' && <div>{salary}</div>}
+      {salary !== '' && (
+        <BoxContainer mouseHover="true">
+          <div style={styles.tableHeader}>Tax Calculator for £ {salary}</div>
+
+          <BoxContainer mouseHover="true">
+            {salary} some some somee
+          </BoxContainer>
+          <BoxContainer mouseHover="true">
+            {salary} some some somee
+          </BoxContainer>
+        </BoxContainer>
+      )}
       <div style={styles.backgroundShape}></div>
     </div>
   );
@@ -26,6 +37,7 @@ export default function FrontPageContent({ props }) {
 const styles = {
   container: {
     display: 'grid',
+    justifyContent: 'center',
     width: '100%',
   },
   mainHeader: {
@@ -37,6 +49,15 @@ const styles = {
     fontSize: `6vw`,
     fontWeight: '800',
     color: `${colors.primary}`,
+  },
+  tableHeader: {
+    margin: '2vw auto',
+    padding: '20px auto',
+    fontSize: `2.5vw`,
+    textAlign: 'center',
+  },
+  formContainer: {
+    width: `80vw`,
   },
   backgroundShape: {
     position: 'absolute',
