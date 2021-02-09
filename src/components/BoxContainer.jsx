@@ -2,7 +2,12 @@ import React, { useState } from 'react';
 
 import colors from '../config/colors';
 
-export default function BoxContainer({ children, height, mouseHover }) {
+export default function BoxContainer({
+  children,
+  height,
+  backgroundColor,
+  mouseHover,
+}) {
   const [hover, setHover] = useState(false);
 
   const boxShadow =
@@ -16,8 +21,9 @@ export default function BoxContainer({ children, height, mouseHover }) {
         display: 'grid',
         justifyContent: 'center',
         alignContent: 'center',
-        margin: `1vh 0`,
+        margin: `4px 0`,
         padding: `10px`,
+        backgroundColor: `${backgroundColor}`,
         border: `1px solid ${colors.silver}`,
         borderRadius: `8px`,
         boxShadow: boxShadow,

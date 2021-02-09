@@ -40,12 +40,6 @@ const styles = {
     fontWeight: '800',
     color: `${colors.primary}`,
   },
-  tableHeader: {
-    margin: '2vw auto',
-    padding: '20px auto',
-    fontSize: `2.5vw`,
-    textAlign: 'center',
-  },
   formContainer: {
     width: `80vw`,
   },
