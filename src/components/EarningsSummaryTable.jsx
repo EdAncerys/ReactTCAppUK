@@ -23,7 +23,7 @@ export default function EarningsSummaryTable({ props }) {
 
   const personalAllowance = PERSONAL_ALLOWANCE_2019_2020;
   const taxableIncome = salary - personalAllowance;
-  const taxOn_20 = salary > 
+  const taxOn_20 = salary > personalAllowance ? personalAllowance : false;
 
   return (
     <div style={styles.container}>
