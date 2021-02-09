@@ -41,7 +41,7 @@ const styles = {
     color: `${colors.primary}`,
   },
   formContainer: {
-    width: `80vw`,
+    width: `95vw`,
   },
   backgroundShape: {
     position: 'absolute',
