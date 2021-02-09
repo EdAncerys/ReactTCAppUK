@@ -47,10 +47,6 @@ export default function TaxForm({ props }) {
             }}
           />
           <UISlider />
-          <Button
-            title="Calculate"
-            onClick={() => manageAppContext.setSalary(!manageAppContext.salary)}
-          />
         </form>
       </div>
     </div>

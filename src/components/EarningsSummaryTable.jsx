@@ -134,6 +134,11 @@ export default function EarningsSummaryTable({ props }) {
             <div style={styles.tableCell}>{salary}</div>
           </div>
         </BoxContainer>
+        <div style={styles.disclaimer}>
+          *Disclaimer: This figure is for guidance only, and does not in any way
+          constitute financial advice. We advise you to consult a specialist
+          regarding any major financial decisions.{' '}
+        </div>
       </BoxContainer>
     </div>
   );
@@ -162,5 +167,11 @@ const styles = {
     padding: '20px auto',
     fontSize: `2.5vw`,
     textAlign: 'center',
+  },
+  disclaimer: {
+    fontSize: '1vw',
+    color: `${colors.black}`,
+    opacity: '0.6',
+    marginTop: '1vw',
   },
 };
