@@ -12,7 +12,7 @@ WebApp - Pay Tax Calculator
 
 #### Go to project directory. Via bash
 
-`cd tax-calculator`
+`cd react-tc-app-uk`
 
 #### Run the script
 
